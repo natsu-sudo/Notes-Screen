@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/registrationFragment">
+
+    <fragment
+        android:id="@+id/registrationFragment"
+        android:name="com.coding.aisleassignment.ui.RegistrationFragment"
+        android:label="fragment_registration"
+        tools:layout="@layout/fragment_registration" >
+        <action
+            android:id="@+id/action_registrationFragment_to_OTPValidationFragment"
+            app:destination="@id/OTPValidationFragment"
+            app:popUpTo="@id/registrationFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/OTPValidationFragment"
+        android:name="com.coding.aisleassignment.ui.OTPValidationFragment"
+        android:label="fragment_o_t_p_validation"
+        tools:layout="@layout/fragment_o_t_p_validation" >
+        <action
+            android:id="@+id/action_OTPValidationFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/OTPValidationFragment"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="number"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_OTPValidationFragment_to_registrationFragment"
+            app:destination="@id/registrationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.coding.aisleassignment.ui.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+</navigation>

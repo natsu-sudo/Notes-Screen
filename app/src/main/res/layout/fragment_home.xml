@@ -1,0 +1,260 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.HomeFragment"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingBottom="@dimen/density_pixel_10"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/notes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/density_pixel_5"
+                android:text="@string/notes"
+                android:textColor="@color/black_app"
+                android:fontFamily="@font/gilroy_extra_bold"
+                android:textSize="@dimen/scale_independent_pixel_35"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/personal_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black_app"
+                android:layout_marginTop="@dimen/density_pixel_5"
+                android:fontFamily="@font/gilroy_semi_bold"
+                android:textSize="@dimen/scale_independent_pixel_20"
+                android:text="@string/personal_message_to_you"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/notes" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/photo_holder"
+                style="@style/roundedCardView"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/density_pixel_5"
+                android:layout_marginStart="@dimen/density_pixel_10"
+                android:layout_marginEnd="@dimen/density_pixel_10"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/personal_msg">
+
+                <androidx.coordinatorlayout.widget.CoordinatorLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/photo_1" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginStart="@dimen/density_pixel_10"
+                        android:layout_marginBottom="@dimen/density_pixel_5"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/scale_independent_pixel_25"
+                            android:fontFamily="@font/gilroy_extra_bold"
+                            android:text="@string/meena_23" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/scale_independent_pixel_20"
+                            android:fontFamily="@font/gilroy_semi_bold"
+                            android:text="@string/tap_to_review_50_notes"/>
+                    </LinearLayout>
+
+
+
+                </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/density_pixel_15"
+                android:layout_marginEnd="@dimen/density_pixel_15"
+                android:layout_marginTop="@dimen/density_pixel_15"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/photo_holder"
+                tools:layout_editor_absoluteX="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/gilroy_extra_bold"
+                        android:text="@string/interested_in_you"
+                        android:textColor="@color/black_app"
+                        android:textSize="@dimen/scale_independent_pixel_25" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/gilroy_semi_bold"
+                        android:text="@string/premium_members_can_view_all_their_likes_at_once"
+                        android:textSize="@dimen/scale_independent_pixel_20" />
+                </LinearLayout>
+
+                <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                    android:id="@+id/continue_otp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/gilroy_semi_bold"
+                    android:text="@string/upgrade"
+                    android:textAlignment="center"
+                    android:textColor="@color/black_app"
+                    app:backgroundTint="#FFD600" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/density_pixel_10"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/photo_holder_2"
+                    style="@style/roundedCardView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/density_pixel_10"
+                    android:layout_marginEnd="@dimen/density_pixel_10"
+                    android:layout_weight="1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/personal_msg">
+
+                    <androidx.coordinatorlayout.widget.CoordinatorLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/teena"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            app:srcCompat="@drawable/photo_2" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_marginStart="@dimen/density_pixel_10"
+                            android:layout_marginBottom="@dimen/density_pixel_5"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/scale_independent_pixel_25"
+                                android:fontFamily="@font/gilroy_extra_bold"
+                                android:text="@string/teena" />
+                        </LinearLayout>
+
+
+                    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/photo_holder_3"
+                    style="@style/roundedCardView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/density_pixel_10"
+                    android:layout_marginEnd="@dimen/density_pixel_10"
+                    android:layout_weight="1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/personal_msg">
+
+                    <androidx.coordinatorlayout.widget.CoordinatorLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/beena"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            app:srcCompat="@drawable/photo_3" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_marginStart="@dimen/density_pixel_10"
+                            android:layout_marginBottom="@dimen/density_pixel_5"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/scale_independent_pixel_25"
+                                android:fontFamily="@font/gilroy_extra_bold"
+                                android:text="@string/beena" />
+                        </LinearLayout>
+
+
+                    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:foregroundGravity="bottom"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/bottom_navigation_menu" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

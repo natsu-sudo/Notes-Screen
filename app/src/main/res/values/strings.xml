@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Aisle Assignment</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="get_otp">Get OTP</string>
+    <string name="enter_your">Enter Your</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="continue_1">Continue</string>
+    <string name="_91_9562673169">+91 9562673169</string>
+    <string name="enter_the_n_otp">Enter The \n OTP</string>
+    <string name="zero_zero">00:1%$s</string>
+    <string name="session">Session Expired</string>
+    <string name="token_expired">Current Token Expired</string>
+    <string name="try_again">Try Again</string>
+    <string name="cancel">Cancel</string>
+    <string name="personal_message_to_you">Personal Message to You</string>
+    <string name="interested_in_you">Interested In You</string>
+    <string name="premium_members_can_view_all_their_likes_at_once">Premium members can view all their likes at once</string>
+    <string name="upgrade">Upgrade</string>
+    <string name="discover">Discover</string>
+    <string name="notes">Notes</string>
+    <string name="matches">Matches</string>
+    <string name="profile">Profile</string>
+    <string name="meena_23">Meena, 23</string>
+    <string name="tap_to_review_50_notes">Tap to review 50+ notes</string>
+    <string name="teena">Teena</string>
+    <string name="beena">Beena</string>
+    <string name="madatory">All fields are Mandatory</string>
+    <string name="ok">Ok</string>
+    <string name="wrong">Please Register</string>
+    <string name="mention_number">"Mention Number doesn't Exist in our Database.Please Register you number "</string>
+    <string name="error">Error Occured</string>
+    <string name="invalid">Invalid Response</string>
+    <string name="try_again_1">Please Try Again</string>
+</resources>
