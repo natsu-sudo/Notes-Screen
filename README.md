@@ -8,3 +8,6 @@ Steps 2:User Will Receive the OTP in their Phone
 Steps 3:After Successfully Authentication user will be their in Respective Account
 
 Library Used for API Calls Retrofit.
+
+For Testing use the Country Code +91 Number:9876543212
+and Otp:1234
